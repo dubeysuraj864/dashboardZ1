@@ -8,21 +8,38 @@
         >
       </div>
       <div class="navlinks">
-        
         <ul>
+          <li>
           
-          <li><i class="fa fa-home"></i>Dashboard<i class="fa fa-angle-down"></i>
-          <ul class="dropdown">
-            <li>Create</li>
-
-          </ul>
+              <input type="checkbox" id="dashboard-btn" />
+              <i class="fa fa-home"></i>
+            <label for="dashboard-btn">Dashboard    <i
+              class="fa fa-angle-down" id="arrow"
+            ></i></label>
+         
+            <ul class="dropdown-dashboard">
+              <li>Create</li>
+            </ul>
           </li>
-          <li><i class="fa fa-book"></i>Pages<i class="fa fa-angle-down"></i> </li>
-          <li><i class="fa fa-windows"></i>Applications<i class="fa fa-angle-down"></i></li>
-          <li><i class="fa fa-pagelines"></i> UI Components<i class="fa fa-angle-down"></i></li>
-          <li><i class="fa fa-trello"></i> Widgets<i class="fa fa-angle-down"></i></li>
-          <li><i class="fa fa-address-card"></i>Forms<i class="fa fa-angle-down"></i></li>
-          <li><i class="fa fa-bar-chart"></i>Charts<i class="fa fa-angle-down"></i></li>
+          <li>
+            <i class="fa fa-book"></i>Pages
+            
+          </li>
+          <li>
+            <i class="fa fa-windows"></i>Applications
+          </li>
+          <li>
+            <i class="fa fa-pagelines"></i> UI Components
+          </li>
+          <li>
+            
+          </li>
+          <li>
+            <i class="fa fa-address-card"></i>Forms
+          </li>
+          <li>
+            <i class="fa fa-bar-chart"></i>Charts
+          </li>
         </ul>
       </div>
     </nav>
@@ -37,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-   width:20vw;
+  width: 20vw;
   height: fit-content;
   height: 100vh;
   background: rgb(240, 240, 240);
@@ -63,7 +80,7 @@ nav {
     color: rgb(93, 74, 167);
   }
 }
-.navlinks {
+.navlinks{
   margin: 3vw 0vw;
   ul li {
     margin: 3vw 1vw;
@@ -72,18 +89,41 @@ nav {
     color: rgb(67, 56, 112);
     list-style: none;
   }
-  i{
+  i {
     margin-right: 2vw;
   }
-  .fa{
-  font-size: 1.2vw;
-}
-
-}
-
-  .fa-angle-down{
-    font-size: 2vw;
-    font-weight: 700;
-    margin-left: 2vw;
+  .fa {
+    font-size: 1.2vw;
   }
+}
+label{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 700;
+    font-size: 1vw;
+    color: rgb(67, 56, 112);
+    list-style: none;
+}
+
+input{
+  display: none;
+}
+
+.fa-angle-down {
+  font-size: 2vw;
+  font-weight: 700;
+  margin-left: 2vw;
+}
+
+.dropdown-dashboard {
+  display: none;
+}
+#dashboard-btn:checked ~ .dropdown-dashboard {
+  display: block;
+   
+}
+#dashboard-btn:checked ~ .fa-angle-down{
+
+    transform: rotate(180deg);
+
+}
 </style>
